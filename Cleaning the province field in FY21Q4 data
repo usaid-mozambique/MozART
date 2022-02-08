@@ -1,0 +1,22 @@
+SELECT *,
+CASE WHEN Provincia = 'Zambézia' THEN 'Zambezia'
+WHEN Provincia = 'Cidade de Maputo' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Alto Mae' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Malhangalene' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'Hospital de Dia do José Macamo' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'Centro de Saude Jose Macamo' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Xipamanine' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Chamanculo' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS 1 de Maio' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'Centro Saude Polana Canico' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS 1 de Junho' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS ALBASINE' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Romao' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Hulene' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Inhagoia' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Magoanine' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo' AND designacao LIKE 'CS Incassane' THEN 'Maputo Cidade'
+WHEN Provincia = 'Maputo Provincia' THEN 'Maputo'
+ELSE Provincia
+END AS 'provincia_rev'
+FROM t_hdd
